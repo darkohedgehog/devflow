@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import Image from "next/image";
 
-export function Theme() {
+export default function Theme() {
   const { setTheme, resolvedTheme: currentTheme } = useTheme();
 
   return (

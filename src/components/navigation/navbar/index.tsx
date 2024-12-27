@@ -2,7 +2,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { Theme } from "./Theme";
+
+import dynamic from "next/dynamic";
+
+const Theme = dynamic(() => import("./Theme"), {
+  ssr: false,
+});
 
 const Navbar = () => {
   return (
@@ -12,6 +17,7 @@ const Navbar = () => {
           src="/images/site-logo.svg"
           width={23}
           height={23}
+          priority={false}
           alt="DevFlow Logo"
         />
 
