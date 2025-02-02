@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 
 import dynamic from "next/dynamic";
+import MobileNavigation from "./MobileNavigation";
 
 const Theme = dynamic(() => import("./Theme"), {
   ssr: false,
@@ -30,6 +31,7 @@ const Navbar = () => {
 
       <div className="flex-between gap-5">
         <Theme />
+        <MobileNavigation />
       </div>
     </nav>
   );
